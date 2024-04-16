@@ -598,7 +598,7 @@ section {
   text-align: center;
   background: rgba(221 20 20 / 75%);
   transition: 0.3s;
-  width: 50%;
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -1390,3 +1390,49 @@ section {
 .cv a:hover span.text:after {
   background: #ece8e1;
 }
+
+.experience {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 80%;
+  margin-right: 300px;
+}
+
+@media (max-width: 768px) {
+  .experience{
+    width: 100%;
+  }
+}
+
+.job {
+  background-color: #242a41;
+  color: white;
+  padding: 20px;
+  border: 15px solid #313957;
+  border-radius: 5px;
+  width: 60%;
+}
+.job h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.job p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.buttonproject{
+  font-size: 105%;
+  background-color: #d9d9d9;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid #313957;
+  border-radius: 5px;
+}
+.buttonproject a{
+  
+  color: #313957;
+}
+
