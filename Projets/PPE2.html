@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Presentation E-Marketplace</title>
+    <link href="PPE2.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/img/portfolio.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Application Web Tholdi</h1>
+    </header>
+
+    <section>
+        <h2>Ilustrations</h2>
+        <div id="Ilustrations">
+            <img src="../assets/img/projets/E-Marketplace.png" alt="Description de l'image 1" style="display: block;">
+            <img src="../assets/img/projets/xampp.png" alt="Description de l'image 2" style="display: none;">
+            <img src="../assets/img/projets/catalog.png" alt="Description de l'image 3" style="display: none;">
+            <img src="../assets/img/projets/SelectionDesImagesDansLaBdd.png" alt="Description de l'image 4" style="display: none;">
+            <img src="../assets/img/projets/Formulaire_de_connexion.png" alt="Description de l'image 5" style="display: none;">
+            <img src="../assets/img/projets/declarationDesVariablesemail&mdp.png" alt="Description de l'image 6" style="display: none;">
+            <img src="../assets/img/projets/aperçuDeLaBddContenantLesDonnéesD'inscriptionCryptés.png" alt="Description de l'image 7" style="display: none;">
+            <img src="../assets/img/projets/StockageDeLaSessionDansLeCookiePHPSESSID.png" alt="Description de l'image 8" style="display: none;">
+            <img src="../assets/img/projets/informations legales.png" alt="Description de l'image 9" style="display: none;">
+        </div>
+        <button id="previousButton">Précédent</button>
+        <button id="nextButton">Suivant</button>
+    </section>
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function() {
+            var images = document.querySelectorAll('#Ilustrations img');
+            //var currentImageIndex = -1; //on l'initialise a -1 et pas 0 car 0 est un index de la boucle for.
+            var currencyImageIndex = 0;
+        
+            // Détecter l'image actuellement affichée
+            for (var i = 0; i < images.length; i++) {
+                if (images[i].style.display === 'block') {
+                    currentImageIndex = i;
+                    break;
+                }
+            }
+        
+            // Cacher l'image courante
+            images[currentImageIndex].style.display = 'none';
+        
+            // Afficher la prochaine image
+            var nextImageIndex = (currentImageIndex + 1) % images.length; //opération modulo
+            images[nextImageIndex].style.display = 'block';
+        });
+    </script>
+    <script>
+        document.getElementById('previousButton').addEventListener('click', function() {
+            var images = document.querySelectorAll('#Ilustrations img'); // Trouver l'image actuellement visible
+            //var currentImageIndex = -1; //on l'initialise a -1 et pas 0 car 0 est un index de la boucle for.
+            var currencyImageIndex = 0;
+
+            // Détecter l'image actuellement affichée
+            for (var i = 0; i < images.length; i++) {
+                if (images[i].style.display === 'block') {
+                    currentImageIndex = i;
+                    break;
+                }
+            }
+        
+            // Cacher l'image courante
+            images[currentImageIndex].style.display = 'none';
+        
+            // Calculer l'index de l'image précédente
+            var previousImageIndex = currentImageIndex - 1
+            
+            if (previousImageIndex < 0) {
+            // Si l'index est négatif, nous passons à la dernière image
+            previousImageIndex = images.length - 1;  //on fait debut du tableau - 1 donc on revient a la fin du tableau
+            }
+
+            images[previousImageIndex].style.display = 'block';//afficher previousImageIndex dans le tableau
+        });
+    </script>
+
+</body>

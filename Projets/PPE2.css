@@ -1,0 +1,45 @@
+header h1 {
+    font-size: 48px; 
+    font-weight: bold; /* Rend le texte plus épais */
+    color: #333; 
+    text-shadow: 1px 1px 2px #666; /* Ajoute une ombre pour un effet 3D léger */
+    margin-top: 20px; 
+}
+
+
+#Ilustrations img {
+    display: block; /* Chaque image est un bloc, ce qui force un saut de ligne après */
+    width: 70%; 
+    height: 65vh; /* vh (viewport height) qui est basé sur la hauteur de la fenêtre d'affichage */
+    margin-bottom: 10%;
+}
+
+
+#previousButton{
+    position: relative;
+    bottom: 85px;  /* Déplace le bouton vers le haut de 85px */
+    background-color: #007BFF;
+    color: white;             
+    padding: 12px 24px;       
+    font-size: 16px;          
+    cursor: pointer;          /* Change le curseur en une main quand survolé */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+#previousButton:hover {
+    background-color: #0056b3;  /* Une teinte plus foncée de vert au survol */
+}
+
+#nextButton{
+    position: relative;
+    bottom: 85px;  
+    background-color: #007BFF; 
+    color: white;              
+    padding: 12px 24px;        
+    font-size: 16px;           
+    cursor: pointer;           
+    transition: background-color 0.3s; 
+}
+
+#nextButton:hover {
+    background-color: #0056b3;  /* Une teinte plus foncée de vert au survol */
+}
