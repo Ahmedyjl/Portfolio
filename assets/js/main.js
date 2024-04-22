@@ -117,6 +117,17 @@
     return false;
   });
 
+  $('[href="#E-Marketplace"]').click(function() {
+    var target = $('#E-Marketplace'); // Obtenez l'élément cible
+    if (target.length) { // Vérifiez si l'élément existe
+        $('html, body').animate({
+            scrollTop: target.offset().top // Défilez jusqu'à la position de l'élément
+        }, 1500, 'easeInOutExpo');
+        return false; // Empêche le comportement par défaut du lien
+    }
+});
+
+
   // jQuery counterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
