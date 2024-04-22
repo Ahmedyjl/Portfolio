@@ -10,14 +10,14 @@ header h1 {
 #Ilustrations img {
     display: block; /* Chaque image est un bloc, ce qui force un saut de ligne après */
     width: 70%; 
-    height: 65vh; /* vh (viewport height) qui est basé sur la hauteur de la fenêtre d'affichage */
+    height: 75vh; /* vh (viewport height) qui est basé sur la hauteur de la fenêtre d'affichage */
     margin-bottom: 10%;
 }
 
 
 #previousButton{
     position: relative;
-    bottom: 85px;  /* Déplace le bouton vers le haut de 85px */
+    bottom: 145px;  /* Déplace le bouton vers le haut de 85px */
     background-color: #007BFF;
     color: white;             
     padding: 12px 24px;       
@@ -31,7 +31,7 @@ header h1 {
 
 #nextButton{
     position: relative;
-    bottom: 85px;  
+    bottom: 145px;  
     background-color: #007BFF; 
     color: white;              
     padding: 12px 24px;        
